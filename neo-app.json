@@ -39,6 +39,6 @@
 			"description": "Service Blockchain"
 		}
 	],
-	"authenticationMethod": "none",
+	//"authenticationMethod": "none",
 	"sendWelcomeFileRedirect": true
 }
