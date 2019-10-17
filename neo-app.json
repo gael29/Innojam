@@ -21,6 +21,22 @@
 				"entryPath": "/test-resources"
 			},
 			"description": "SAPUI5 Test Resources"
+		},
+			{
+			"path": "/blockchaintoken",
+			"target": {
+				"type": "destination",
+				"name": "BLOCKCHAIN_TOKEN"
+			},
+			"description": "Token Blockchain"
+		},
+			{
+			"path": "/blockchainservice",
+			"target": {
+				"type": "destination",
+				"name": "BLOCKCHAIN_SERVICE"
+			},
+			"description": "Service Blockchain"
 		}
 	],
 	"authenticationMethod": "none",
