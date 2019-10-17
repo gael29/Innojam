@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+var data = {"hah" : "Lokesh"};
+ 
+var xmlhttp = new XMLHttpRequest();
+ 
+xmlhttp.open("POST", "/demo", true);
+ 
+xmlhttp.send( JSON.stringify( data ) );
+=======
 
     var id = 1;
     var json_form = {
@@ -38,3 +47,4 @@
                 //process the JSON data etc
             }
     })
+>>>>>>> refs/heads/master
