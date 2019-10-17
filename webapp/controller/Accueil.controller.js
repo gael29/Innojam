@@ -133,6 +133,37 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 		testbutton: function () {
 			console.log("test de l'API 6");
 
+			var searchCondition = "1/id003"
+			var serviceURL = '/blockchainservice';
+			var productReviews = {};
+			$.ajax({
+				url: serviceURL + "/" + searchCondition,
+				type: "GET",
+				beforeSend: function (xhr) {
+					xhr.setRequestHeader("Authorization", "Bearer " + accessToken);
+				},
+				async: false,
+				success: function (data) {
+					try {
+						//debugger;
+						var results = data.values;
+						console.log("resultats");
+						console.log(data);
+	
+
+					} catch (err) {
+						console.log("try ko :" + err.message);
+					}
+				},
+				error: function (request, status, error) {
+					console.log("data ko :" + request.responseText);
+				}
+			});
+
+
+
+
+
 			var accessToken;
 			var tokenURL = "/blockchaintoken";
 			var clientId = Dataset[0];
@@ -160,19 +191,22 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 				timeout: 5000
 			});
 			
-			var searchCondition = "1/id012"
-			var serviceURL = '/blockchainservice';
+			var id = 7;
+			var json_form = {"bogzezergzergzergze" : "hello"};
 			var productReviews = {};
 			$.ajax({
-				url: serviceURL + "/" + searchCondition,
-				type: "GET",
+				url: '/blockchainservice/1/' + id ,
+				type: "POST",
+				dataType : 'json',
+				data: json_form,
+				contenttype: 'application/json',
 				beforeSend: function (xhr) {
 					xhr.setRequestHeader("Authorization", "Bearer " + accessToken);
 				},
 				async: false,
 				success: function (data) {
 					try {
-						//debugger;
+
 						var results = data.values;
 						console.log("resultats");
 						console.log(data);
