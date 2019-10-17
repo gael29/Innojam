@@ -1,0 +1,190 @@
+{
+	"_version": "1.8.0",
+	"sap.app": {
+		"_version": "1.3.0",
+		"id": "com.sap.build.standard.untitledPrototype",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.2.2"
+		},
+		"dataSources": {},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"ach": "ach",
+		"resources": "resources.json",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.32.0"
+		}
+	},
+	"sap.ui": {
+		"_version": "1.3.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"_version": "1.3.0",
+		"rootView": {
+			"viewName": "generated.app.view.FormulaireMixture",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.50.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			}
+		},
+		"resources": {
+			"css": []
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "com.sap.build.standard.untitledPrototype.view",
+				"controlId": "App",
+				"clearTarget": false,
+				"controlAggregation": "pages",
+				"bypassed": {
+					"target": [
+						"Accueil"
+					]
+				}
+			},
+			"targets": {
+				"Accueil": {
+					"controlAggregation": "pages",
+					"viewName": "Accueil",
+					"viewId": "Accueil",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"MesComposants": {
+					"controlAggregation": "pages",
+					"viewName": "MesComposants",
+					"viewId": "MesComposants",
+					"viewLevel": 2,
+					"transition": "slide"
+				},
+				"MesProduits_1": {
+					"controlAggregation": "pages",
+					"viewName": "MesProduits_1",
+					"viewId": "MesProduits_1",
+					"viewLevel": 5,
+					"transition": "slide"
+				},
+				"FormulaireSubstance": {
+					"controlAggregation": "pages",
+					"viewName": "FormulaireSubstance",
+					"viewId": "FormulaireSubstance",
+					"viewLevel": 6,
+					"transition": "slide"
+				},
+				"FormulaireProduit": {
+					"controlAggregation": "pages",
+					"viewName": "FormulaireProduit",
+					"viewId": "FormulaireProduit",
+					"viewLevel": 7,
+					"transition": "slide"
+				},
+				"AjouterComposant": {
+					"controlAggregation": "pages",
+					"viewName": "AjouterComposant",
+					"viewId": "AjouterComposant",
+					"viewLevel": 3,
+					"transition": "slide"
+				},
+				"FormulaireMixture": {
+					"controlAggregation": "pages",
+					"viewName": "FormulaireMixture",
+					"viewId": "FormulaireMixture",
+					"viewLevel": 4,
+					"transition": "slide"
+				}
+			},
+			"routes": [
+				{
+					"pattern": "Accueil/:context:",
+					"name": "Accueil",
+					"target": [
+						"Accueil"
+					]
+				},
+				{
+					"pattern": "",
+					"name": "default",
+					"target": [
+						"Accueil"
+					]
+				},
+				{
+					"pattern": "MesComposants/:context:",
+					"name": "MesComposants",
+					"target": [
+						"MesComposants"
+					]
+				},
+				{
+					"pattern": "MesProduits_1/:context:",
+					"name": "MesProduits_1",
+					"target": [
+						"MesProduits_1"
+					]
+				},
+				{
+					"pattern": "FormulaireSubstance/:context:",
+					"name": "FormulaireSubstance",
+					"target": [
+						"FormulaireSubstance"
+					]
+				},
+				{
+					"pattern": "FormulaireProduit/:context:",
+					"name": "FormulaireProduit",
+					"target": [
+						"FormulaireProduit"
+					]
+				},
+				{
+					"pattern": "AjouterComposant/:context:",
+					"name": "AjouterComposant",
+					"target": [
+						"AjouterComposant"
+					]
+				},
+				{
+					"pattern": "FormulaireMixture/:context:",
+					"name": "FormulaireMixture",
+					"target": [
+						"FormulaireMixture"
+					]
+				}
+			]
+		}
+	}
+}
