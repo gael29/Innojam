@@ -99,7 +99,7 @@
                         </layout:control>
                     </layout:PositionContainer>
                     <layout:PositionContainer left="63px" top="161px">
-                        <layout:control>
+                        <layout:control> 
                             <Button text="Accueil" type="Default" iconFirst="true" width="129.10000610351562px" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
                         </layout:control>
                     </layout:PositionContainer>
