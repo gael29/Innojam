@@ -13,21 +13,8 @@
                             <Button text="Mes composants" type="Default" iconFirst="true" width="439.3125px" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress1"/>
                         </layout:control>
                     </layout:PositionContainer>
-                    <layout:PositionContainer left="432px" top="355px">
-                        <layout:control>
-                            <Button text="testbutton" press="testbutton" icon="sap-icon://action"/>
-                        </layout:control>
-                    </layout:PositionContainer>
-                    <layout:PositionContainer left="430px" top="461px">
-                        <layout:control>
-                            <Button text="Ajout composant" press="add_composant_button" icon="sap-icon://action"/>
-                        </layout:control>
-                    </layout:PositionContainer>
-                    <layout:PositionContainer left="430px" top="600px">
-                        <layout:control>
-                            <Button text="Get composant" press="get_composant_button" icon="sap-icon://action"/>
-                        </layout:control>
-                    </layout:PositionContainer>
+                   
+                   
                     
                 </layout:positions>
             </layout:AbsoluteLayout>
