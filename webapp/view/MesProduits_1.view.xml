@@ -1,5 +1,5 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.untitledPrototype.controller.MesProduits_1" xmlns="sap.m" xmlns:tnt="sap.tnt" xmlns:layout1="sap.ui.layout" xmlns:layout="sap.ui.commons.layout">
-    <Page showHeader="false" title="Page Title" showFooter="false" showNavButton="false" enableScrolling="false">
+    <Page showHeader="false" title="Mes produits" showFooter="false" showNavButton="false" enableScrolling="false">
         <content>
             <layout:AbsoluteLayout horizontalScrolling="Hidden" verticalScrolling="Auto">
                 <layout:positions>
@@ -17,11 +17,7 @@
                             </tnt:NavigationList>
                         </layout:control>
                     </layout:PositionContainer>
-                    <layout:PositionContainer left="1052px" top="324px">
-                        <layout:control>
-                            <Text text="CM" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                        </layout:control>
-                    </layout:PositionContainer>
+                
                     <layout:PositionContainer left="648px" top="375px">
                         <layout:control>
                             <ObjectNumber number="150.00" unit="USD" emphasized="true" state="None"/>
@@ -104,7 +100,7 @@
                     </layout:PositionContainer>
                     <layout:PositionContainer left="63px" top="161px">
                         <layout:control>
-                            <Button text="Acceuil" type="Default" iconFirst="true" width="129.10000610351562px" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+                            <Button text="Accueil" type="Default" iconFirst="true" width="129.10000610351562px" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
                         </layout:control>
                     </layout:PositionContainer>
                     <layout:PositionContainer left="64px" top="81px">
