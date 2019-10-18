@@ -282,10 +282,6 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
                     
                     "Substance" : [{"Nom": "Plomb", "N°EC": "231-100-4", "N°CAS": "7439-92-1", "Reach": true, "CM": false, "Poids substances": 10, "Percentage": "3%"}, {"Nom": "Etain", "N°EC": "7440-31-5", "N°CAS": "7440-31-5", "Reach": false, "CM": true, "Poids substances": 5, "Percentage": "1,5%"}],
                     
-                    "N° EC" : "231-100-4",
-                    
-                    "N° CAS" : "7439-92-1",
-                    
                     "Date de la déclaration" : "25/02/2019",
                     
                     "Poids de l'article" : 50,

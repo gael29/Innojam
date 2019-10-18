@@ -42,8 +42,8 @@
                                                     <Label text="Ref" design="Standard" width="136.32000000px" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
                                                 </form:label>
                                                 <form:fields>
-                                                    <Input type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
-                                                    <Button text="Chercher" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                                                    <Input type="Text" id="comp_search" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
+                                                    <Button text="Chercher" onclick="src_compo()"  type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
                                                 </form:fields>
                                             </form:FormElement>
                                         </form:formElements>

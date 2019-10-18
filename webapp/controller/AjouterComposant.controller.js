@@ -142,6 +142,11 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			this.oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			this.oRouter.getTarget("AjouterComposant").attachDisplay(jQuery.proxy(this.handleRouteMatched, this));
 
+		},
+		
+		src_compo: function(){
+			var compo = document.getElementById("comp_search").value;
+			console.log(compo);
 		}
 	});
 }, /* bExport= */ true);
