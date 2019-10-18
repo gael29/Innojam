@@ -37,7 +37,7 @@ sap.ui.define([
 				timeout: 5000
 			});
 			
-			var searchCondition = "1/id003"
+			var searchCondition = "1/id012"
 			var serviceURL = '/blockchainservice';
 			var productReviews = {};
 			$.ajax({

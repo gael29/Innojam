@@ -133,7 +133,34 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 		testbutton: function () {
 			console.log("test de l'API 6");
 
-			var searchCondition = "1/id003"
+			var accessToken;
+			var tokenURL = "/blockchaintoken";
+			var clientId = Dataset[0];
+			var clientSecret = Dataset[1];
+			console.log(clientSecret)
+
+			$.ajax({
+				url: tokenURL + "?grant_type=client_credentials",
+				type: "GET",
+				contentType: "application/json",
+				dataType: "json",
+				async: false,
+				beforeSend: function (xhr) {
+					xhr.setRequestHeader("Authorization", "Basic " + btoa(clientId + ":" + clientSecret));
+				},
+				success: function (response) {
+					//debugger;
+					console.log("OK");
+					accessToken = response.access_token;
+					console.log(accessToken);
+				},
+				error: function (request, status, error) {
+					console.log("TOKEN KO :" + request.responseText);
+				},
+				timeout: 5000
+			});
+			
+			var searchCondition = "1/1"
 			var serviceURL = '/blockchainservice';
 			var productReviews = {};
 			$.ajax({
@@ -160,8 +187,31 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 				}
 			});
 
+		},
+		
+		testpost: function ()
+        {
+           
+  /*            var id = 5;
+            var json_form = {
+            	"testmescouilles": "ça marche enculé"
+            };
+         $.ajax({
+                    url: '/blockchainservice' + '/1/' + id +'/',
+                    type: "POST",
+                    dataType: "json",
+                    data: JSON.stringify({ "testmescouilles": "ça marche enculé" }),
+                    contenttype: 'application/json',
+                    beforeSend: function(xhr) {
+                        xhr.setRequestHeader("Authorization", "Bearer " + Dataset[2])
+                    }, 
+                    success: function(data){
+                        console.log(data);
+                        //process the JSON data etc
+                    }
+            });   */
 
-
+			console.log("test de l'API 6");
 
 
 			var accessToken;
@@ -220,6 +270,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 					console.log("data ko :" + request.responseText);
 				}
 			});
+
 
 		},
 		add_composant_button: function() {
@@ -289,5 +340,9 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			
 		}
 		
+
+		
+
+        }
 	});
 }, /* bExport= */ true);

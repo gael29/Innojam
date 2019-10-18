@@ -4,12 +4,12 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 	"sap/ui/core/routing/History"
 ], function(BaseController, MessageBox, Utilities, History) {
 	"use strict";
-
+ 
 	return BaseController.extend("com.sap.build.standard.untitledPrototype.controller.AjouterComposant", {
 		handleRouteMatched: function(oEvent) {
 			var sAppId = "App5da865029c97a36106f86f48";
 
-			var oParams = {};He
+			var oParams = {};
 
 			if (oEvent.mParameters.data.context) {
 				this.sContext = oEvent.mParameters.data.context;
