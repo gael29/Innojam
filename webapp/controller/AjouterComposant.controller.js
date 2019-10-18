@@ -144,9 +144,10 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 
 		},
 		
-		src_compo: function(){
-			var compo = document.getElementById("comp_search").value;
-			console.log(compo);
+		src_compo: function(oEvent){
+			var button = oEvent.getSource();
+			var search = sap.ui.getView().byId("comp_search");
+			console.log(search);
 		}
 	});
 }, /* bExport= */ true);
