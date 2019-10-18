@@ -271,8 +271,74 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 				}
 			});
 
-		
 
-        }
+		},
+		add_composant_button: function() {
+			var id = 7;
+			var json_form = {
+				    "Code fournisseur (DUNS)": "99-997-0494",
+    
+                    "Code article fournisseur" : "CF01",
+                    
+                    "Substance" : [{"Nom": "Plomb", "N°EC": "231-100-4", "N°CAS": "7439-92-1", "Reach": true, "CM": false, "Poids substances": 10, "Percentage": "3%"}, {"Nom": "Etain", "N°EC": "7440-31-5", "N°CAS": "7440-31-5", "Reach": false, "CM": true, "Poids substances": 5, "Percentage": "1,5%"}],
+                    
+                    "N° EC" : "231-100-4",
+                    
+                    "N° CAS" : "7439-92-1",
+                    
+                    "Date de la déclaration" : "25/02/2019",
+                    
+                    "Poids de l'article" : 50,
+                    
+        			"Owners" : [1, 2] };
+			
+			
+			$.ajax({
+				url: '/blockchainservice/1/' + id ,
+				type: "POST",
+				dataType : 'json',
+				data: json_form,
+				contenttype: 'application/json',
+				beforeSend: function (xhr) {
+					xhr.setRequestHeader("Authorization", "Bearer " + Dataset[2]);
+				},
+				async: false,
+				success: function (data) {
+					try {
+
+						var results = data.values;
+						console.log("resultats");
+						console.log(data);
+	
+
+					} catch (err) {
+						console.log("try ko :" + err.message);
+					}
+				},
+				error: function (request, status, error) {
+					console.log("data ko :" + request.responseText);
+				}
+			});
+			
+		},
+		
+		get_composant_button: function() {
+			var id = 7;
+			$.ajax({
+				url: '/blockchainservice/1/' + id ,
+				type: "GET",
+				contentType: "application/json",
+				dataType: "json",
+				beforeSend: function (xhr) {
+					xhr.setRequestHeader("Authorization", "Bearer " + Dataset[2]);
+				},
+				success: function(data){
+                console.log(data);
+                //process the JSON data etc
+            	}
+			});
+			
+		}
+
 	});
 }, /* bExport= */ true);
