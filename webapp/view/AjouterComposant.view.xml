@@ -8,11 +8,7 @@
                             <Button text="Accueil" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
                         </layout:control>
                     </layout:PositionContainer>
-                    <layout:PositionContainer left="348px" top="514px">
-                        <layout:control>
-                            <Text text="Supplier Name" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
-                        </layout:control>
-                    </layout:PositionContainer>
+
                     <layout:PositionContainer left="140px" top="135px">
                         <layout:control>
                             <Button text="Retour" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress1"/>
@@ -32,7 +28,7 @@
                         <layout:control>
                             <form:Form width="100%" editable="true" visible="true">
                                 <form:title>
-                                    <core:Title text="Entrer la référence du composant voulu" level="Auto"/>
+                                    <core:Title text="Entrez la référence du composant voulu" level="Auto"/>
                                 </form:title>
                                 <form:formContainers>
                                     <form:FormContainer visible="true">
@@ -99,21 +95,7 @@
                                         <footer/>
                                     </Column>
                                 </columns>
-                                <items>
-                                    <ColumnListItem type="Active">
-                                        <cells>
-                                            <ObjectIdentifier title="Product Name" text="Product ID" titleActive="false" visible="true"/>
-                                            <layout1:HorizontalLayout>
-                                                <layout1:content/>
-                                            </layout1:HorizontalLayout>
-                                            <ObjectNumber number="150.00" unit="USD" emphasized="true" state="None"/>
-                                            <layout1:HorizontalLayout>
-                                                <layout1:content/>
-                                            </layout1:HorizontalLayout>
-                                            <Button text="Ajouter" type="Default" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress2"/>
-                                        </cells>
-                                    </ColumnListItem>
-                                </items>
+                      
                             </Table>
                         </layout:control>
                     </layout:PositionContainer>
